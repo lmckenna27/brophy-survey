@@ -45,14 +45,6 @@ function dO(obfB64, key) {
 
 const key = dO(op, ok);
 
-
-// ----- TEAM CAPTAINS -----
-const teamCaptains = [
-    "Jim Grindey","Chabli Balcom","Abbey Withey","Fred Garner","Chris Rapa","Ian Hunthausen",
-    "John Lovell","Wayne Catan","Jack White","Nick Ellis","Paul Hamel","Scott Middlemist",
-    "Andy Mazzolini","Ashley Doud","Brittany DiMarco","Simon Zachary, SJ"
-];
-
 // ----- PANEL VISIBILITY -----
 const surveyContainer = document.getElementById("survey");
 const enteredPanelPassword = prompt("Enter password to access Presenter Panel:");
