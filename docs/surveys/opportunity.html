@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Opportunity Index - Brophy Surveys</title>
+    <link rel="stylesheet" href="../css/globalStyle.css">
+    <link rel="stylesheet" href="../css/surveyStyle.css">
+    <script type="module" src="../js/surveyScript.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="notification" style="display:none;"></div>
+
+    <div class="container" id="nav">
+        <div class="container-box left" id="nav">
+            <a href="../index.html"><img src="../assets/logo.svg" style="width: 65px; height: 50px;"></a>
+        </div>
+        <div class="container-box right" id="nav">
+            <button onclick="location.href='../about.html'" style="background: none; color: #000000;"><img src="../assets/navigation-icons/globe.png" width="20px" height="20px">Learn more</button>
+            <button onclick="location.href='../presenter.html'">Presenter panel</button>
+        </div>
+    </div>
+
+    <div id="teamCaptainSelection" style="display: block;">
+        <div class="container" id="survey">
+            <h1>Team Captain Selection</h1>
+            <p>Please select your team captain:</p>
+
+            <div class="custom-dropdown">
+                <button class="dropdown-button" style="background: none; color: #000000; transform: none;">Select</button>
+                <div class="dropdown-content">
+                    <div class="dropdown-item" data-value="Jim Grindey">
+                        <p>Jim Grindey</p>
+                        <h6>Campion • E214</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Chabli Balcom">
+                        <p>Chabli Balcom</p>
+                        <h6>Campion • L101</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Abbey Withey">
+                        <p>Abbey Withey</p>
+                        <h6>Canisius • E218</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Fred Garner">
+                        <p>Fred Garner</p>
+                        <h6>Canisius • P217</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Chris Rapa">
+                        <p>Chris Rapa</p>
+                        <h6>Claver • P119</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Ian Hunthausen">
+                        <p>Ian Hunthausen</p>
+                        <h6>Claver • B212</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="John Lovell">
+                        <p>John Lovell</p>
+                        <h6>Faber • B203</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Wayne Catan">
+                        <p>Wayne Catan</p>
+                        <h6>Faber • D201</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Jack White">
+                        <p>Jack White</p>
+                        <h6>Gonzaga • P117</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Nick Ellis">
+                        <p>Nick Ellis</p>
+                        <h6>Gonzaga • B111</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Paul Hamel">
+                        <p>Paul Hamel</p>
+                        <h6>Ignatius • B205</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Scott Middlemist">
+                        <p>Scott Middlemist</p>
+                        <h6>Ignatius • E211</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Andy Mazzolini">
+                        <p>Andy Mazzolini</p>
+                        <h6>Ricci • B216</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Ashley Doud">
+                        <p>Ashley Doud</p>
+                        <h6>Ricci • B210</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Brittany DiMarco">
+                        <p>Brittany DiMarco</p>
+                        <h6>Xavier • B211</h6>
+                    </div>
+                    <div class="dropdown-item" data-value="Simon Zachary, SJ">
+                        <p>Simon Zachary, SJ</p>
+                        <h6>Xavier • B105</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <button onclick="show('instructions', 'teamCaptainSelection')">Next</button>
+                <button onclick="location.href='../index.html'" style="background: none; color: #000000;">Return</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="instructions" style="display: none;">
+        <div class="container" id="survey">
+            <h1>Privllege Index Survey</h1>
+            <p>Please take a few minutes to thoughtfully complete this survey. It is designed to help you reflect on how different factors - such as family background, education, identity, and access to resources - can shape your experiences and opportunities.</p>
+            <ul>
+                <li>There are no right or wrong answers.</li>
+                <li>Be honest and answer based on your own life.</li>
+                <li>Take your time and respond to each statement carefully. The goal is self-reflection, not judgment.</li>
+                <li>Your responses are confidential and will only be used to promote understanding and empathy within our school community.</li>
+            </ul>
+            <div class="button-row">
+                <button onclick="show('surveyContent','instructions')">Begin survey</button>
+                <button onclick="show('teamCaptainSelection','instructions')" style="background: none; color: #000000;">Return</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="surveyContent" style="display: none;">
+        <div class="container" id="survey">
+            <h1>Opportunity Index Survey</h1>
+            <p>Select "Yes" or "No" for each statement.</p>
+            <br>
+            <form id="opportunityForm">
+                <div class="survey-question">
+                    <p>1. I have running water in my home.</p>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 1, 'yesno')">Yes</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 1, 'yesno')">No</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>2. I have the opportunity to eat at least two meals a day.</p>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 2, 'yesno')">Yes</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 2, 'yesno')">No</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>3. At least one of my parents has stable employment.</p>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 3, 'yesno')">Yes</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 3, 'yesno')">No</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>4. I have access to a quiet place to study at home.</p>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 4, 'yesno')">Yes</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 4, 'yesno')">No</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>5. I have reliable internet access at home.</p>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 5, 'yesno')">Yes</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 5, 'yesno')">No</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>6. My family can afford extracurricular activities such as sports, music, or clubs.</p>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 6, 'yesno')">Yes</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 6, 'yesno')">No</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>7. I have never worried about my family being able to pay for basic needs like housing or electricity.</p>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 7, 'yesno')">Yes</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 7, 'yesno')">No</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>8. I have never had to work a job to help support my family.</p>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 8, 'yesno')">Yes</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 8, 'yesno')">No</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>9. My family has never had to choose between paying for basic needs and school-related expenses.</p>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 9, 'yesno')">Yes</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 9, 'yesno')">No</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>10. I have never gone on a family vacation or trip outside my city.</p>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 10, 'yesno')">Yes</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 10, 'yesno')">No</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>11. I have always attended the same school district without having to move frequently. </p>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 11, 'yesno')">Yes</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 11, 'yesno')">No</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>12. I have at least one parent or guardian who graduated from college.</p>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 12, 'yesno')">Yes</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 12, 'yesno')">No</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>13. I feel my opinions are valued and heard in class discussions.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 13, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 13, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 13, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 13, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 13, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>14. I have noticed that some racial groups are more common in honors or advanced classes than others.</p>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 14, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 14, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 14, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 14, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 14, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>15. I feel my culture and history are represented in my school curriculum.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 15, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 15, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 15, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 15, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 15, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>16. I feel represented and accepted in my school community.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 16, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 16, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 16, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 16, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 16, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>17. I have adults in my life who encourage me to pursue my goals.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 17, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 17, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 17, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 17, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 17, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>18. I feel comfortable being myself at school without fear of judgment or exclusion.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 18, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 18, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 18, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 18, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 18, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>19. I have never had to hide part of who I am to fit in.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 19, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 19, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 19, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 19, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 19, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>20. I feel that all students are treated fairly at my school.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 20, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 20, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 20, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 20, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 20, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>21. I see teachers or staff at my school who share my racial or cultural background.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 21, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 21, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 21, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 21, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 21, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>22. I have spaces or organizations at school where I feel supported and understood.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 22, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 22, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 22, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 22, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 22, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>23. My religious or spiritual beliefs are respected at school.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 23, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 23, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 23, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 23, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 23, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>24. I feel comfortable sharing my religious beliefs with classmates or teachers.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 24, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 24, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 24, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 24, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 24, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>25. I have never felt left out because of my religion or spiritual beliefs.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 25, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 25, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 25, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 25, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 25, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>26. I feel safe and accepted at school regardless of my sexual orientation.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 26, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 26, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 26, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 26, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 26, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="survey-question">
+                    <p>27. I have the support I need at school to fully participate in classes and activities, regardless of my abilities or disabilities.</p>
+                    <button type="button" class="answer-button" data-value="4" onclick="selectAnswer(this, 27, 'likert')">Strongly Agree</button>
+                    <button type="button" class="answer-button" data-value="3" onclick="selectAnswer(this, 27, 'likert')">Agree</button>
+                    <button type="button" class="answer-button" data-value="2" onclick="selectAnswer(this, 27, 'likert')">Neutral</button>
+                    <button type="button" class="answer-button" data-value="1" onclick="selectAnswer(this, 27, 'likert')">Disagree</button>
+                    <button type="button" class="answer-button" data-value="0" onclick="selectAnswer(this, 27, 'likert')">Strongly Disagree</button>
+                    <hr>
+                </div>
+                <div class="button-row">
+                    <button type="button" onclick="calculateScore()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="surveyResult" style="display: none;">
+        <div class="container" id="survey">
+            <h1>Opportunity Index Survey Result</h1>
+            <h3>Your final score:</h3>
+            <h2 id="finalScore"></h2>
+
+            <p>This number is merely a reference and not a measure of your worth or potential. It does not define who you are as a person. At Brophy, you have access to opportunities that can help you grow, explore your passions, and make a positive impact: supportive teachers and mentors, extracurricular activities, academic resources, spiritual guidance, and a community that values your unique voice and perspective. Use this reflection as a way to recognize your strengths and think about how you can take advantage of the opportunities around you.</p>
+            <p>Thank you for completing this survey. Please wait quietly until your peers have finished, and direct your attention back to the presenters.</p>
+
+            <div class="button-row">
+                <button onclick="location.href='../index.html'">Return home</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

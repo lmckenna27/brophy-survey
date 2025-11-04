@@ -1,0 +1,32 @@
+/* ---------- SURVEY ---------- */
+
+.container#survey {
+    width: auto;
+    height: auto;
+    min-height: 160px;
+    max-height: 80vh;
+
+    margin: 12px;
+    margin-top: 80px;
+    padding: 15px;
+
+    gap: 5px;
+    display: grid;
+    border: 1px black solid;
+    border-radius: 10px;
+
+    overflow-y: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    justify-items: left;
+}
+
+#opportunityForm {
+    width: 100%;
+}
+
+button.answer-button {
+    background: none;
+    color: #000000; 
+    border: 1px solid #000000
+}

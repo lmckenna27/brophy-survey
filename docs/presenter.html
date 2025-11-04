@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Presenter Panel - Brophy Surveys</title>
+    <link rel="stylesheet" href="css/globalStyle.css">
+    <link rel="stylesheet" href="css/surveyStyle.css">
+    <script type="module" src="js/presenterScript.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="notification" style="display:none;"></div>
+
+    <div class="container" id="nav">
+        <div class="container-box left" id="nav">
+            <a href="index.html"><img src="./assets/logo.svg" style="width: 65px; height: 50px;"></a>
+        </div>
+        <div class="container-box right" id="nav">
+            <button onclick="location.href='about.html'" style="background: none; color: #000000;"><img src="./assets/navigation-icons/globe.png" style="width: 20px; height: 20px;">Learn more</button>
+            <button onclick="location.href='presenter.html'">Presenter panel</button>
+        </div>
+    </div>
+
+    <div class="container" id="survey" style="display:none;">
+        <h1>Presenter Panel</h1>
+        <p>Please select your team captain:</p>
+        
+        <div class="custom-dropdown">
+            <button class="dropdown-button" style="background: none; color: #000000; transform: none;">Select</button>
+            <div class="dropdown-content">
+                <div class="dropdown-item" data-value="Jim Grindey">
+                    <p>Jim Grindey</p>
+                    <h6>Campion • E214</h6>
+                </div>
+                <div class="dropdown-item" data-value="Chabli Balcom">
+                    <p>Chabli Balcom</p>
+                    <h6>Campion • L101</h6>
+                </div>
+                <div class="dropdown-item" data-value="Abbey Withey">
+                    <p>Abbey Withey</p>
+                    <h6>Canisius • E218</h6>
+                </div>
+                <div class="dropdown-item" data-value="Fred Garner">
+                    <p>Fred Garner</p>
+                    <h6>Canisius • P217</h6>
+                </div>
+                <div class="dropdown-item" data-value="Chris Rapa">
+                    <p>Chris Rapa</p>
+                    <h6>Claver • P119</h6>
+                </div>
+                <div class="dropdown-item" data-value="Ian Hunthausen">
+                    <p>Ian Hunthausen</p>
+                    <h6>Claver • B212</h6>
+                </div>
+                <div class="dropdown-item" data-value="John Lovell">
+                    <p>John Lovell</p>
+                    <h6>Faber • B203</h6>
+                </div>
+                <div class="dropdown-item" data-value="Wayne Catan">
+                    <p>Wayne Catan</p>
+                    <h6>Faber • D201</h6>
+                </div>
+                <div class="dropdown-item" data-value="Jack White">
+                    <p>Jack White</p>
+                    <h6>Gonzaga • P117</h6>
+                </div>
+                <div class="dropdown-item" data-value="Nick Ellis">
+                    <p>Nick Ellis</p>
+                    <h6>Gonzaga • B111</h6>
+                </div>
+                <div class="dropdown-item" data-value="Paul Hamel">
+                    <p>Paul Hamel</p>
+                    <h6>Ignatius • B205</h6>
+                </div>
+                <div class="dropdown-item" data-value="Scott Middlemist">
+                    <p>Scott Middlemist</p>
+                    <h6>Ignatius • E211</h6>
+                </div>
+                <div class="dropdown-item" data-value="Andy Mazzolini">
+                    <p>Andy Mazzolini</p>
+                    <h6>Ricci • B216</h6>
+                </div>
+                <div class="dropdown-item" data-value="Ashley Doud">
+                    <p>Ashley Doud</p>
+                    <h6>Ricci • B210</h6>
+                </div>
+                <div class="dropdown-item" data-value="Brittany DiMarco">
+                    <p>Brittany DiMarco</p>
+                    <h6>Xavier • B211</h6>
+                </div>
+                <div class="dropdown-item" data-value="Simon Zachary, SJ">
+                    <p>Simon Zachary, SJ</p>
+                    <h6>Xavier • B105</h6>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <h2>Overall Grade-Level Statistics</h2>
+        <ul>
+            <li id="overallAverage">Average score:ㅤ<b>0.00</b></li>
+            <li id="highPct">High index:ㅤ<b>0%</b>ㅤof senior body</li>
+            <li id="medPct">Medium index:ㅤ<b>0%</b>ㅤof senior body</li>
+            <li id="lowPct">Low index:ㅤ<b>0%</b>ㅤof senior body</li>
+        </ul>
+        <br>
+
+        <h2>Team Room Statistics</h2>
+        <ul>
+            <li id="captainSubmissions">Submissions:ㅤ<b>0</b></li>
+            <li id="captainAvg">Average score:ㅤ<b>0.00</b></li>
+        </ul>
+
+        <div class="button-row">
+            <button id="fullscrnBtn">Enter fullscreen</button>
+        </div>
+    </div>
+</body>
+</html>
